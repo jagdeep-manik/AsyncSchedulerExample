@@ -14,6 +14,10 @@
 		9A2AB16528A5B38800CB629E /* AsyncSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB16428A5B38800CB629E /* AsyncSchedulerTests.swift */; };
 		9A2AB16F28A5B38800CB629E /* AsyncSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB16E28A5B38800CB629E /* AsyncSchedulerUITests.swift */; };
 		9A2AB17128A5B38800CB629E /* AsyncSchedulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB17028A5B38800CB629E /* AsyncSchedulerUITestsLaunchTests.swift */; };
+		9A2AB17F28A5B3AA00CB629E /* Task+Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB17E28A5B3AA00CB629E /* Task+Sleep.swift */; };
+		9A2AB18228A5B4AA00CB629E /* AsyncScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB18128A5B4AA00CB629E /* AsyncScheduler.swift */; };
+		9A2AB18428A5B4EB00CB629E /* AsyncSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB18328A5B4EB00CB629E /* AsyncSchedule.swift */; };
+		9A2AB18728A5C5ED00CB629E /* ColorSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2AB18628A5C5ED00CB629E /* ColorSchedule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		9A2AB16A28A5B38800CB629E /* AsyncSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2AB16E28A5B38800CB629E /* AsyncSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSchedulerUITests.swift; sourceTree = "<group>"; };
 		9A2AB17028A5B38800CB629E /* AsyncSchedulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSchedulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A2AB17E28A5B3AA00CB629E /* Task+Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Sleep.swift"; sourceTree = "<group>"; };
+		9A2AB18128A5B4AA00CB629E /* AsyncScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncScheduler.swift; sourceTree = "<group>"; };
+		9A2AB18328A5B4EB00CB629E /* AsyncSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncSchedule.swift; sourceTree = "<group>"; };
+		9A2AB18628A5C5ED00CB629E /* ColorSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchedule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		9A2AB15228A5B38600CB629E /* AsyncScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				9A2AB18028A5B4A000CB629E /* Scheduling */,
+				9A2AB17D28A5B39900CB629E /* Utilities */,
+				9A2AB18528A5C5DE00CB629E /* Schedules */,
 				9A2AB15328A5B38600CB629E /* AsyncSchedulerApp.swift */,
 				9A2AB15528A5B38600CB629E /* ContentView.swift */,
 				9A2AB15728A5B38800CB629E /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				9A2AB17028A5B38800CB629E /* AsyncSchedulerUITestsLaunchTests.swift */,
 			);
 			path = AsyncSchedulerUITests;
+			sourceTree = "<group>";
+		};
+		9A2AB17D28A5B39900CB629E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9A2AB17E28A5B3AA00CB629E /* Task+Sleep.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9A2AB18028A5B4A000CB629E /* Scheduling */ = {
+			isa = PBXGroup;
+			children = (
+				9A2AB18328A5B4EB00CB629E /* AsyncSchedule.swift */,
+				9A2AB18128A5B4AA00CB629E /* AsyncScheduler.swift */,
+			);
+			path = Scheduling;
+			sourceTree = "<group>";
+		};
+		9A2AB18528A5C5DE00CB629E /* Schedules */ = {
+			isa = PBXGroup;
+			children = (
+				9A2AB18628A5C5ED00CB629E /* ColorSchedule.swift */,
+			);
+			path = Schedules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2AB18728A5C5ED00CB629E /* ColorSchedule.swift in Sources */,
+				9A2AB18228A5B4AA00CB629E /* AsyncScheduler.swift in Sources */,
+				9A2AB18428A5B4EB00CB629E /* AsyncSchedule.swift in Sources */,
+				9A2AB17F28A5B3AA00CB629E /* Task+Sleep.swift in Sources */,
 				9A2AB15628A5B38600CB629E /* ContentView.swift in Sources */,
 				9A2AB15428A5B38600CB629E /* AsyncSchedulerApp.swift in Sources */,
 			);

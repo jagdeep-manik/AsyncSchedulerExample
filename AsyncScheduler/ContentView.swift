@@ -54,6 +54,10 @@ final class ContentViewModel: ObservableObject {
             ColorData(uuid: UUID(), color: $0.latestColor.value)
         }
     }
+
+    func updateColorType(_ colorType: ColorType) {
+        ColorSchedule.colorHint.send(colorType)
+    }
 }
 
 struct ColorView: View {
@@ -77,6 +81,17 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 16) {
+            HStack {
+                Button("Red") {
+                    viewModel.updateColorType(.red)
+                }
+                Button("Green") {
+                    viewModel.updateColorType(.green)
+                }
+                Button("Blue") {
+                    viewModel.updateColorType(.blue)
+                }
+            }
             Button("Remove All Schedules") {
                 viewModel.removeAll()
             }

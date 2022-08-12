@@ -18,16 +18,27 @@ enum ColorType {
 actor ColorState {
     var currentColorType: ColorType = .red
     var colorValue: Double = 0.0
+    var ascending: Bool = true
 
     func changeColorType(to colorType: ColorType) {
         currentColorType = colorType
     }
 
     func newColor() -> Color {
-        colorValue += 0.01
+        // Pulsing behavior from 0.0 to 1.0 and back
+        if ascending {
+            colorValue += 0.01
 
-        if colorValue > 1 {
-            colorValue = 0
+            if colorValue > 1 {
+                colorValue = 1.0
+                ascending = false
+            }
+        } else {
+            colorValue -= 0.01
+            if colorValue < 0 {
+                colorValue = 0.0
+                ascending = true
+            }
         }
 
         switch currentColorType {
@@ -46,7 +57,7 @@ final class ColorSchedule: AsyncHintableSchedule {
 
     // MARK: - Static Vars
 
-    static let interval: DispatchTimeInterval = .milliseconds(50)
+    static let interval: DispatchTimeInterval = .milliseconds(16)
 
     static let colorHint = PassthroughSubject<ColorType, Never>()
 
